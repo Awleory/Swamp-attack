@@ -23,6 +23,7 @@ public class EntityAnimations : MonoBehaviour
     {
         Animator = GetComponent<Animator>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
+        Entity = GetComponent<Entity>();
 
         _previousFrameX = transform.position.x;
     }
@@ -34,10 +35,6 @@ public class EntityAnimations : MonoBehaviour
         Animator.SetFloat(_speedParameter, Math.Abs(Entity.EntityPhysics.VelocityX));
     }
 
-    public void Initialize(Entity entity)
-    {
-        Entity = entity;
-    }
     public void PlayJump()
     {
         Animator.SetTrigger(_jumpingParameter);
@@ -58,5 +55,4 @@ public class EntityAnimations : MonoBehaviour
 
         _previousFrameX = transform.position.x;
     }
-
 }

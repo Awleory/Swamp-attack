@@ -6,6 +6,8 @@ public class JumpingState : EntityState
 {
     private bool _grounded;
 
+    public JumpingState(Entity entity, EntityStateMachine stateMachine) : base(entity, stateMachine) { }
+
     public override void Enter()
     {
         base.Enter();
@@ -29,10 +31,5 @@ public class JumpingState : EntityState
     {
         base.PhysicsUpdate();
         _grounded = Entity.EntityPhysics.Grounded;
-    }
-
-    public override void Exit()
-    {
-        base.Exit();
     }
 }

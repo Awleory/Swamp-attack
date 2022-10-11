@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent (typeof(BoxCollider2D))]
 public class EntityPhysics : MonoBehaviour
 {
     [SerializeField] private float _speed = 1f;
@@ -41,19 +42,9 @@ public class EntityPhysics : MonoBehaviour
         _contactFilter.useLayerMask = true;
     }
 
-    public void GiveMovement(Vector2 direction, bool jump = false)
+    public void GiveMovement(Vector2 direction)
     {
         _directionVelocity = direction;
-
-        if (jump)
-        {
-            TryJump();
-        }
-    }
-
-    public void GetHandleInput()
-    {
-        _directionVelocity = new Vector2(Input.GetAxis("Horizontal"), 0);
     }
 
     public bool TryJump()

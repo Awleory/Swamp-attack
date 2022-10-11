@@ -2,13 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Entity))]
-public class Player : MonoBehaviour
+public class Player : Entity
 {
-    private Entity _entity;
+    private PlayerHandleInput _playerHandleInput;
 
-    private void OnEnable()
+    protected override void OnEnable()
     {
-        _entity = GetComponent<Entity>();
+        base.OnEnable();
+        _playerHandleInput = new PlayerHandleInput(this);
+    }
+
+    protected override void Start()
+    {
+        base.Start();
+    }
+
+    private void Update()
+    {
+        _playerHandleInput.HandleInput();
     }
 }
