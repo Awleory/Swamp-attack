@@ -1,10 +1,10 @@
-using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent (typeof(BoxCollider2D))]
-public class MovementPhysics : MonoBehaviour
+public class EntityPhysics : MonoBehaviour
 {
     [SerializeField] private float _speed = 1f;
     [SerializeField] private float _gravityRate = 1f;
@@ -12,8 +12,6 @@ public class MovementPhysics : MonoBehaviour
     [SerializeField] private float _jumpForce = 5f;
     [SerializeField] private int _extraJumps = 0;
     [SerializeField] private float _minGroundNormalY = .65f;
-
-    public event Action<float> Moved;
 
     public bool Jumped { get; private set; }
     public bool Grounded { get; private set; }
@@ -44,38 +42,13 @@ public class MovementPhysics : MonoBehaviour
         _contactFilter.useLayerMask = true;
     }
 
-    private void Update()
-    {
-        UpdateMove();
-        Moved?.Invoke(VelocityX);
-    }
-
-    public void ChaseTarget(Transform target, out bool targetReached)
-    {
-        targetReached = false;
-
-        if (target == null)
-        {
-            return;
-        }
-
-        Vector2 move = new Vector2(target.rotation.x, target.rotation.y);
-
-        SetDirectionMove(move);
-    }
-
-    public void SetDirectionMove(Vector2 direction)
+    public void GiveMovement(Vector2 direction)
     {
         _directionVelocity = direction;
     }
 
     public bool TryJump()
     {
-        if (_jumpsDone == 0 && Grounded == false)
-        {
-            return false;
-        }
-
         if (_jumpsDone <= _extraJumps)
         {
             Jumped = true;

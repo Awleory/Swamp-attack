@@ -1113,8 +1113,8 @@ TextureImporter:
         y: 1184
         width: 52
         height: 41
-      alignment: 9
-      pivot: {x: 0.36538464, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1169,15 +1169,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death 1
+      name: Minotaur - Sprite Sheet_140
       rect:
         serializedVersion: 2
         x: 28
         y: 1088
         width: 52
         height: 41
-      alignment: 9
-      pivot: {x: 0.36538464, y: -0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1190,15 +1190,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death 2
+      name: Minotaur - Sprite Sheet_141
       rect:
         serializedVersion: 2
         x: 124
         y: 1088
         width: 56
         height: 40
-      alignment: 9
-      pivot: {x: 0.33928573, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1211,15 +1211,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death 3
+      name: Minotaur - Sprite Sheet_142
       rect:
         serializedVersion: 2
         x: 220
         y: 1088
         width: 56
         height: 41
-      alignment: 9
-      pivot: {x: 0.33928573, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1232,15 +1232,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death 4
+      name: Minotaur - Sprite Sheet_148
       rect:
         serializedVersion: 2
         x: 28
         y: 992
         width: 56
         height: 41
-      alignment: 9
-      pivot: {x: 0.33928573, y: -0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1253,15 +1253,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death 5
+      name: Minotaur - Sprite Sheet_152
       rect:
         serializedVersion: 2
         x: 125
         y: 992
         width: 54
         height: 35
-      alignment: 9
-      pivot: {x: 0.35185185, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1274,15 +1274,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death 6
+      name: Minotaur - Sprite Sheet_154
       rect:
         serializedVersion: 2
         x: 226
         y: 992
         width: 56
         height: 28
-      alignment: 9
-      pivot: {x: 0.3392857, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1295,15 +1295,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death 7
+      name: Minotaur - Sprite Sheet_155
       rect:
         serializedVersion: 2
         x: 322
         y: 991
         width: 54
         height: 21
-      alignment: 9
-      pivot: {x: 0.35185185, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1316,15 +1316,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death 8
+      name: Minotaur - Sprite Sheet_156
       rect:
         serializedVersion: 2
         x: 418
         y: 991
         width: 54
         height: 22
-      alignment: 9
-      pivot: {x: 0.35185185, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1337,15 +1337,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death 9
+      name: Minotaur - Sprite Sheet_157
       rect:
         serializedVersion: 2
         x: 514
         y: 991
         width: 54
         height: 22
-      alignment: 9
-      pivot: {x: 0.35185185, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2632,7 +2632,6 @@ TextureImporter:
       Minotaur - Sprite Sheet_118: 1797932457
       Minotaur - Sprite Sheet_224: -1275540222
       Minotaur - Sprite Sheet_104: 1749328845
-      Death 8: -85624015
       Minotaur - Sprite Sheet_299: -2029826845
       Minotaur - Sprite Sheet_100: -441614836
       Minotaur - Sprite Sheet_128: 1884038709
@@ -2646,11 +2645,12 @@ TextureImporter:
       Minotaur - Sprite Sheet_247: 652236126
       Minotaur - Sprite Sheet_121: -852247500
       Minotaur - Sprite Sheet_241: 169622983
+      Minotaur - Sprite Sheet_156: -85624015
       Minotaur - Sprite Sheet_172: 2011189775
-      Minotaur - Sprite Sheet_291: 222904035
       Minotaur - Sprite Sheet_101: 561825114
       Minotaur - Sprite Sheet_259: 1616931977
       Walk 6: -493641334
+      Minotaur - Sprite Sheet_291: 222904035
       Minotaur - Sprite Sheet_304: -1308463702
       Minotaur - Sprite Sheet_190: -203949737
       Minotaur - Sprite Sheet_1: 628885827
@@ -2667,10 +2667,10 @@ TextureImporter:
       Minotaur - Sprite Sheet_306: -1502034503
       Minotaur - Sprite Sheet_278: 1400433718
       Minotaur - Sprite Sheet_249: 64535626
-      Minotaur - Sprite Sheet_80: -989133370
       Minotaur - Sprite Sheet_282: 998666932
-      Minotaur - Sprite Sheet_91: 396889489
       Minotaur - Sprite Sheet_139: 755282341
+      Minotaur - Sprite Sheet_91: 396889489
+      Minotaur - Sprite Sheet_80: -989133370
       Minotaur - Sprite Sheet_325: 1494217283
       Attack 3: -1465222496
       idle 4: 411629814
@@ -2690,10 +2690,9 @@ TextureImporter:
       Minotaur - Sprite Sheet_169: -118949806
       Minotaur - Sprite Sheet_92: -483691743
       Minotaur - Sprite Sheet_150: 1086433526
+      Minotaur - Sprite Sheet_154: 1540770291
       Minotaur - Sprite Sheet_275: 2049030503
       Minotaur - Sprite Sheet_147: 1046293920
-      Death 2: 938277501
-      Death 3: 1576286653
       Minotaur - Sprite Sheet_260: -510582903
       Minotaur - Sprite Sheet_146: 1301099733
       Minotaur - Sprite Sheet_26: 1416194587
@@ -2730,8 +2729,9 @@ TextureImporter:
       Minotaur - Sprite Sheet_61: 1244382378
       Minotaur - Sprite Sheet_184: 1024239786
       Minotaur - Sprite Sheet_124: 878944267
-      Minotaur - Sprite Sheet_265: -1508228789
+      Minotaur - Sprite Sheet_155: -1506768709
       Minotaur - Sprite Sheet_22: 201799599
+      Minotaur - Sprite Sheet_265: -1508228789
       Minotaur - Sprite Sheet_229: -2021745001
       Minotaur - Sprite Sheet_60: -2116734753
       Minotaur - Sprite Sheet_286: -1973799095
@@ -2739,7 +2739,6 @@ TextureImporter:
       Minotaur - Sprite Sheet_188: 1993000454
       Attack 1: 340852059
       Minotaur - Sprite Sheet_173: 588936155
-      Death 7: -1506768709
       Minotaur - Sprite Sheet_281: -980218477
       Minotaur - Sprite Sheet_144: 257614786
       Minotaur - Sprite Sheet_316: 223430986
@@ -2763,13 +2762,12 @@ TextureImporter:
       Minotaur - Sprite Sheet_298: 1003144629
       Walk 5: -725607644
       Minotaur - Sprite Sheet_212: 988752142
-      Death 6: 1540770291
       Minotaur - Sprite Sheet_9: 559152181
       Minotaur - Sprite Sheet_216: 1587828506
       Minotaur - Sprite Sheet_38: 1619033511
       Minotaur - Sprite Sheet_198: 632522775
       Minotaur - Sprite Sheet_254: -665181953
-      Death 5: -908139273
+      Minotaur - Sprite Sheet_140: -947085242
       Minotaur - Sprite Sheet_90: -1864491154
       Minotaur - Sprite Sheet_23: -74624030
       Minotaur - Sprite Sheet_226: -136631468
@@ -2786,13 +2784,14 @@ TextureImporter:
       Minotaur - Sprite Sheet_178: 1627655324
       Minotaur - Sprite Sheet_2: -387665231
       Minotaur - Sprite Sheet_227: 1935962115
+      Minotaur - Sprite Sheet_141: 938277501
       Minotaur - Sprite Sheet_285: 291492215
       Minotaur - Sprite Sheet_131: 265645601
       Minotaur - Sprite Sheet_248: 1315333683
       Minotaur - Sprite Sheet_315: 296078180
-      Death 9: -801530385
       Minotaur - Sprite Sheet_230: -587512416
       Minotaur - Sprite Sheet_105: -799587294
+      Minotaur - Sprite Sheet_142: 1576286653
       Minotaur - Sprite Sheet_167: -1266549168
       Minotaur - Sprite Sheet_317: 442860364
       Minotaur - Sprite Sheet_135: 874009209
@@ -2802,24 +2801,24 @@ TextureImporter:
       Minotaur - Sprite Sheet_191: 255016107
       Minotaur - Sprite Sheet_125: 1752512609
       Minotaur - Sprite Sheet_274: 1399356493
+      Minotaur - Sprite Sheet_296: 519285987
       Preparing 4: 745395181
       Minotaur - Sprite Sheet_87: -476945121
       Minotaur - Sprite Sheet_223: 1435387314
-      Minotaur - Sprite Sheet_296: 519285987
       Minotaur - Sprite Sheet_127: 677973507
       Minotaur - Sprite Sheet_114: 1747510875
+      Minotaur - Sprite Sheet_288: -204472428
       Minotaur - Sprite Sheet_133: -382971362
       Minotaur - Sprite Sheet_207: -1641665512
-      Minotaur - Sprite Sheet_288: -204472428
       Minotaur - Sprite Sheet_189: -1517690655
-      Minotaur - Sprite Sheet_98: -956699361
       Preparing 3: 187972381
+      Minotaur - Sprite Sheet_98: -956699361
       Minotaur - Sprite Sheet_231: 1067586982
-      Minotaur - Sprite Sheet_233: -1726357184
       idle 2: -1339756729
+      Minotaur - Sprite Sheet_233: -1726357184
+      Attack 8: 765055381
       Minotaur - Sprite Sheet_300: -1528614849
       Attack 6: -1296860717
-      Attack 8: 765055381
       Minotaur - Sprite Sheet_314: 1254350315
       Minotaur - Sprite Sheet_123: -1085237669
       Minotaur - Sprite Sheet_267: 838265398
@@ -2832,6 +2831,7 @@ TextureImporter:
       Minotaur - Sprite Sheet_102: 1075854378
       Minotaur - Sprite Sheet_19: 1415287090
       Minotaur - Sprite Sheet_143: 468061674
+      Minotaur - Sprite Sheet_157: -801530385
       Minotaur - Sprite Sheet_238: 184380451
       Minotaur - Sprite Sheet_175: 1864930805
       Minotaur - Sprite Sheet_256: 1930969481
@@ -2840,7 +2840,6 @@ TextureImporter:
       Minotaur - Sprite Sheet_110: 1919358080
       Minotaur - Sprite Sheet_170: -62193380
       Minotaur - Sprite Sheet_268: -2019291019
-      Death 4: 157173244
       Minotaur - Sprite Sheet_266: -1161553561
       Attack 9: 615202726
       Minotaur - Sprite Sheet_64: -1315156313
@@ -2858,8 +2857,8 @@ TextureImporter:
       Minotaur - Sprite Sheet_149: -1441368938
       Minotaur - Sprite Sheet_303: 1698027476
       Minotaur - Sprite Sheet_74: 292883568
+      Minotaur - Sprite Sheet_148: 157173244
       Minotaur - Sprite Sheet_163: -1386236242
-      Minotaur - Sprite Sheet_308: -1314741697
       Minotaur - Sprite Sheet_161: 342837908
       Minotaur - Sprite Sheet_51: -550919810
       Minotaur - Sprite Sheet_222: -390350184
@@ -2868,8 +2867,9 @@ TextureImporter:
       Minotaur - Sprite Sheet_221: 1153508836
       Minotaur - Sprite Sheet_262: -264571379
       Minotaur - Sprite Sheet_206: 143709278
-      Walk 8: 813081653
+      Minotaur - Sprite Sheet_308: -1314741697
       Minotaur - Sprite Sheet_289: -1949775762
+      Walk 8: 813081653
       Minotaur - Sprite Sheet_15: 753623061
       Minotaur - Sprite Sheet_130: 819291199
       Attack 5: -753826767
@@ -2879,6 +2879,7 @@ TextureImporter:
       Minotaur - Sprite Sheet_179: 1715893891
       Minotaur - Sprite Sheet_4: 1999361795
       Minotaur - Sprite Sheet_62: -55377895
+      Minotaur - Sprite Sheet_152: -908139273
       Minotaur - Sprite Sheet_239: -48314233
       Minotaur - Sprite Sheet_294: -1903858779
       Minotaur - Sprite Sheet_311: -1619452860
@@ -2939,7 +2940,6 @@ TextureImporter:
       Minotaur - Sprite Sheet_202: 1314750569
       Preparing 1: -603458049
       Preparing 5: -1223440745
-      Death 1: -947085242
       Minotaur - Sprite Sheet_277: -1689110904
       Walk 2: 116149677
       Minotaur - Sprite Sheet_193: -532692903
