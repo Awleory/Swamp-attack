@@ -1,61 +1,82 @@
+﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-[RequireComponent(typeof(EntityPhysics))]
-[RequireComponent(typeof(EntityStateMachine))]
-[RequireComponent(typeof(JumpingState))]
-[RequireComponent(typeof(StandingState))]
-[RequireComponent(typeof(EntityAnimations))]
+[RequireComponent(typeof(MovementPhysics))]
+[RequireComponent(typeof(AnimationController))]
 public class Entity : MonoBehaviour
 {
-    [SerializeField] private bool _hasHandleInput;
-    [SerializeField] private float _maxHealthPoints;
+    [SerializeField] private float _currentHealth;
+    [SerializeField] private int _maxHealthPoints;
 
-    public float HealthPoints => _healthPoints;
-    public bool HasHandleInput => _hasHandleInput;
-    public JumpingState JumpingState => _jumpingState;
-    public StandingState StandingState => _standingState;
-    public EntityPhysics EntityPhysics { get; private set; }
-    public EntityAnimations EntityAnimations { get; private set; }
+    public event Action GotDamage;
+    public event Action Died;
 
-    private EntityStateMachine _entityStateMachine;
-    private JumpingState _jumpingState;
-    private StandingState _standingState;
+    public MovementPhysics MovementPhysics { get; private set; }
+    public AnimationController AnimationController { get; private set; }
+    public bool IsAlive => _healthPoints > 0;
 
     private float _healthPoints;
+    private float _deathTime = 10;
 
-    private void OnEnable()
+    protected virtual void Awake()
     {
-        EntityPhysics = GetComponent<EntityPhysics>();
+        MovementPhysics = GetComponent<MovementPhysics>();
+        AnimationController = GetComponent<AnimationController>();
 
-        EntityAnimations = GetComponent<EntityAnimations>();
-        EntityAnimations.Initialize(this);
+        _healthPoints = _maxHealthPoints;
     }
 
-    private void Start()
+    protected virtual void OnEnable()
     {
-        _entityStateMachine = GetComponent<EntityStateMachine>();
-
-        _standingState = GetComponent<StandingState>();
-        _standingState.Initialize(this, _entityStateMachine);
-
-        _jumpingState = GetComponent<JumpingState>();
-        _jumpingState.Initialize(this, _entityStateMachine);
-
-        _entityStateMachine.Initialize(_standingState);
+        MovementPhysics.Moved += OnMoved;
     }
 
-    private void Update()
+    protected virtual void OnDisable()
     {
-        _entityStateMachine.CurrentState.HandleInput();
-
-        _entityStateMachine.CurrentState.LogicUpdate();
+        MovementPhysics.Moved -= OnMoved;
     }
 
-    private void FixedUpdate()
+    protected virtual void Update()
     {
-        _entityStateMachine.CurrentState.PhysicsUpdate();
+        _currentHealth = _healthPoints;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        if (damage < 0)
+            throw new ArgumentOutOfRangeException(nameof(damage));
+
+        if (IsAlive == false)
+            return;
+
+        _healthPoints = Math.Max(0, _healthPoints - damage);
+        GotDamage?.Invoke();
+        AnimationController.PlayGettingDamage();
+
+        if (_healthPoints == 0)
+            Kill();
+    }
+
+    public void Kill()
+    {
+        Died?.Invoke();
+        AnimationController.PlayDeath();
+        OnDied();
+        StartCoroutine(DeathCoroutine());
+    }
+
+    protected virtual void OnDied() { }
+
+    private IEnumerator DeathCoroutine()
+    {
+        yield return new WaitForSeconds(_deathTime);
+        Destroy(gameObject);
+    }
+
+    private void OnMoved(float velocityX)
+    {
+        AnimationController.OnMove(Mathf.Abs(velocityX));
     }
 }
